@@ -1,0 +1,46 @@
+.inputContainer {
+  display: inline-flex;
+  align-items: center;
+  height: 3rem;
+  border: 1px solid;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+}
+
+.inputContainer:hover, .inputContainer:focus-within {
+  border: 2px solid;
+}
+
+.disabled, .disabled:hover, .disabled:focus-within {
+  border: 1px solid var(--color-text-disabled);
+}
+
+.disabled *, .disabled *:before, .disabled *:after {
+  color: var(--color-text-disabled) !important;
+  fill: var(--color-text-disabled) !important;
+  stroke: var(--color-text-disabled) !important;
+  border-color: var(--color-text-disabled) !important;
+  pointer-events: none;
+}
+
+.input {
+  outline: none;
+  border: 0;
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  background-color: transparent;
+  color: var(--color-text-primary)
+}
+
+.block {
+  width: 100%;
+}
+
+.actions {
+display: inline-block;
+padding: 0 0.5rem;
+border-top-right-radius: 1.5rem;
+border-bottom-right-radius: 1.5rem;
+}

@@ -1,0 +1,109 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 0 2rem;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  min-width: 8.625rem;
+  font-size: 1rem;
+  font-family: var(--font-semi-bold);
+  min-height: 3rem;
+  transition: background-color 0.3s ease-in-out, color 0.2s, border-width 0.1s;
+  white-space: nowrap;
+}
+.button:focus {
+  outline: none;
+}
+
+.button * {
+  pointer-events: none;
+}
+
+button:disabled {
+  background-color: var(--color-bg-input-disabled);
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  background-color: var(--color-bg-input-disabled);
+  color: var(--color-text-disabled);
+}
+
+/** GHOST BACKGROUNDS */
+.ghost {
+  background-color: transparent;
+  border: 1px solid;
+}
+.ghost:not(:disabled):hover,
+.ghost:not(:disabled):active {
+  border: 2px solid;
+}
+
+.ghost:disabled {
+  background-color: transparent;
+  color: var(--color-text-disabled);
+  cursor: not-allowed;
+}
+
+.ghost:disabled:hover {
+  background-color: transparent;
+}
+
+/** SIZES */
+.small {
+  min-height: 2rem;
+}
+
+.medium {
+  min-height: 3rem;
+}
+
+.block {
+  width: 100%;
+}
+
+/** FLOATING BTN */
+.floating {
+  box-shadow: 0 1rem 3rem var(--color-shadow);
+}
+
+/** RIPPLE ANIMATION */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple:before {
+  --ripple-background: var(--color-bg-input);
+  --ripple-opacity: 0.3;
+  --ripple-duration: 600ms;
+
+  content: '';
+  position: absolute;
+  display: block;
+  background: var(--ripple-background, var(--color-bg-input));
+  border-radius: 50%;
+  pointer-events: none;
+  top: calc(var(--y) * 1px);
+  left: calc(var(--x) * 1px);
+  width: calc(var(--d) * 1px);
+  height: calc(var(--d) * 1px);
+  opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+  transition: calc(var(--t, 0) * var(--ripple-duration, 600ms))
+    var(--ripple-easing, linear);
+  transform: translate(-50%, -50%) scale(var(--s, 1));
+  transform-origin: center;
+}
+
+/** PULSE ANIMATION */
+.pulse {
+  transition: box-shadow 0.1s ease-out;
+  box-shadow: 0 0 0 var(--color-shadow);
+}
+.pulse:active {
+  box-shadow: 0 0 2px 4px var(--color-shadow);
+  border-width: 1.4px;
+}

@@ -1,0 +1,33 @@
+.vertical {
+    display: inline-flex;
+    align-items: center;
+    height: 1rem;
+}
+
+.vertical::before {
+    content: '';
+    height: 100%;
+    margin: 0 .25rem;
+    border-left: solid 1px;
+}
+.horisontal {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+}
+.horisontal > * {
+    margin: 0 .25rem
+}
+.horisontal::before, .horisontal::after {
+    content: '';
+    border-bottom: solid 1px;
+}
+.left::before, .right::after{
+    width: 10%
+}
+.left::after, .center::before, .center::after, .right::before, .empty::before{
+    flex: 1
+}
+.dashed::before, .dashed::after {
+    border-bottom-style: dashed
+}

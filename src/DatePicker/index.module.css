@@ -1,0 +1,226 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.inputWrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.field {
+  background-color: var(--color-bg-input);
+  border: 1px solid var(--color-border);
+  outline: none;
+  border-radius: 1.5rem;
+  font-family: var(--font-regular);
+  font-size: 1rem;
+  max-width: 9.6875rem;
+  height: 3rem;
+  color: var(--color-text-primary);
+  padding: 0.6875rem 2.6rem 0.8125rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.picker {
+  width: 16rem;
+  box-shadow: 0 1rem 4rem rgba(73, 92, 136, 0.15);
+  position: absolute;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.pickerUnder {
+  top: 4rem;
+}
+
+.pickerAbove {
+  bottom: 4rem;
+}
+
+.pickerHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.pickerHeaderItem {
+  padding: 1rem 0;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.pickerHeaderItem:nth-child(odd) {
+  width: 30%;
+}
+
+.pickerHeaderItem:nth-child(2) {
+  width: 40%;
+}
+
+.pickerHeaderItem:nth-child(2) span {
+  border-left: 1px solid var(--color-primary-hover);
+  border-right: 1px solid var(--color-primary-hover);
+  display: block;
+}
+
+.pickerBody {
+  padding: 1rem 1rem 1.75rem;
+  background-color: var(--color-bg-input);
+  border-radius: 0 0 1rem 1rem;
+  height: 12rem;
+}
+
+.years {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 -1rem 0;
+}
+
+.years li {
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: background-color 0.4s ease;
+  position: relative;
+}
+
+.years li:hover {
+  background-color: var(--color-bg-grey-2);
+}
+
+.switcher {
+  color: var(--color-text-secondary);
+  stroke: var(--color-text-secondary);
+}
+
+.years .switcher:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.years .switcher svg * {
+  stroke: var(--color-text-secondary);
+}
+
+.years .switcher:hover svg * {
+  stroke: var(--color-primary);
+}
+
+.iconFirst {
+  position: absolute;
+  left: -0.5rem;
+}
+
+.iconLast {
+  position: absolute;
+  right: -0.5rem;
+}
+
+.days {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.day {
+  width: 1.9375rem;
+  height: 1.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: background-color 0.4s ease;
+}
+
+.anotherMonthDay {
+  opacity: 0;
+  cursor: default;
+}
+
+.weekend {
+  color: var(--color-error);;
+}
+
+.days li:hover {
+  background-color: var(--color-bg-grey-2);
+}
+
+.days .anotherMonthDay:hover {
+  background-color: transparent;
+}
+
+.activeItem {
+  background-color: var(--color-chart-yellow);
+}
+
+li.activeItem:hover {
+  background-color: var(--color-chart-yellow);
+}
+
+.week {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: -0.5rem 0 0 0;
+}
+
+.week li {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.tabArrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  height: 0.375rem;
+  width: 1rem;
+}
+
+.underArrow {
+  position: absolute;
+  transform: translateX(-50%) rotate(180deg);
+  height: 0.75rem;
+  width: 1.5rem;
+  top: -0.75rem;
+  left: 3.75rem;
+}
+
+.aboveArrow {
+  position: absolute;
+  height: 0.75rem;
+  width: 1.5rem;
+  bottom: -0.75rem;
+  left: 3.75rem;
+}
+
+.headerItemDisabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,43 @@
+.modalCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-modal-overlay);
+  z-index: 998;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: var(--color-bg-grey-3);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  z-index: 999;
+}
+
+.header {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body {
+  margin: 0 0.7rem;
+}
+
+.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer > * {
+  margin: 0 0.7rem;
+}
+
+.headerText {
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}

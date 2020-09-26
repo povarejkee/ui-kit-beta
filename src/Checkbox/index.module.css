@@ -1,0 +1,68 @@
+.checkbox {
+  display: none;
+}
+
+.checkbox + .label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.checkbox + .label:before {
+  content: '';
+  margin-right: 0.625rem;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+}
+
+.checkbox:disabled + .label {
+  color: var(--color-text-disabled);
+  cursor: auto;
+}
+
+.checkbox:checked + .label:before {
+  border-color: transparent;
+}
+
+.checkbox:checked + .label:after {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.8rem;
+  background-color: var(--color-bg-input);
+  width: 2px;
+  height: 2px;
+  box-shadow: 0.125rem 0 0 var(--color-text-inverse),
+    0.25rem 0 0 var(--color-text-inverse),
+    0.25rem -0.125rem 0 var(--color-text-inverse),
+    0.25rem -0.25rem 0 var(--color-text-inverse),
+    0.25rem -0.375rem 0 var(--color-text-inverse),
+    0.25rem -0.5rem 0 var(--color-text-inverse);
+  transform: rotate(45deg);
+}
+
+.checkbox:disabled:checked + .label:before {
+  background: var(--color-bg-input-disabled);
+  border-color: var(--color-border);
+}
+
+.checkbox:disabled:checked + .label:after {
+  background-color: var(--color-text-disabled);
+  box-shadow: 0.125rem 0 0 var(--color-text-disabled),
+    0.25rem 0 0 var(--color-text-disabled),
+    0.25rem -0.125rem 0 var(--color-text-disabled),
+    0.25rem -0.25rem 0 var(--color-text-disabled),
+    0.25rem -0.375rem 0 var(--color-text-disabled),
+    0.25rem -0.5rem 0 var(--color-text-disabled);
+}
+
+.checkmark {
+  color: var(--color-text-primary);
+}
